@@ -38,8 +38,6 @@ final class SerializerConfigurationPass implements CompilerPassInterface
             $container->setAlias('fos_rest.serializer', 'jms_serializer.serializer');
         } else {
             $container->removeDefinition('fos_rest.serializer.exception_wrapper_serialize_handler');
-        }
-        if ($container->has('serializer')) {
             $container->setAlias('fos_rest.serializer', 'serializer');
         }
     }

@@ -69,7 +69,7 @@ class SerializerConfigurationPassTest extends \PHPUnit_Framework_TestCase
                 ['serializer', true],
             ]));
 
-        $container->expects($this->exactly(2))
+        $container->expects($this->exactly(1))
             ->method('setAlias')
             ->withConsecutive(
                 [$this->equalTo('fos_rest.serializer'), $this->equalTo('jms_serializer.serializer')],
